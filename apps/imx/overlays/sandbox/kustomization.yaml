@@ -1,0 +1,22 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: tn-imx-imx
+resources:
+  - ../../base
+
+images:
+  - name: imx-orchestrate-imxgeo
+    newName: ghcr.io/imx-org/orchestrate-imxgeo
+    newTag: 68887e8dc0e8312f0b4fd581cfcd886b40661556
+
+patches:
+  - target:
+      kind: Ingress
+      name: imx-orchestrate-imxgeo-ing
+    patch: |
+      - op: replace
+        path: /spec/rules/0/host
+        value: imx.apps.digilab.network
+      - op: replace
+        path: /spec/tls/0/hosts/0
+        value: imx.apps.digilab.network

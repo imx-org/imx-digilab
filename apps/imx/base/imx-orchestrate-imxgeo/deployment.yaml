@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dpl
+spec:
+  template:
+    spec:
+      containers:
+      - name: imx-orchestrate-imxgeo
+        image: imx-orchestrate-imxgeo
+        ports:
+          - containerPort: 8080
+            name: http
