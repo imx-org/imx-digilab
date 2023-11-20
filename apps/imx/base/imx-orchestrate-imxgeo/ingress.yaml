@@ -1,26 +1,15 @@
-apiVersion: traefik.containo.us/v1alpha1
-kind: Middleware
-metadata:
-  name: strip-prefix-mw
-spec:
-  stripPrefix:
-    prefixes:
-      - /imxgeo
----
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ing
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
-#    traefik.ingress.kubernetes.io/router.middlewares: tn-imx-imx-imx-orchestrate-imxgeo-strip-prefix-mw@kubernetescrd
 spec:
   rules:
     - host: set-in-overlay
       http:
         paths:
-#          - path: /imxgeo
-          - path: /
+          - path: /imxgeo
             pathType: ImplementationSpecific
             backend:
               service:

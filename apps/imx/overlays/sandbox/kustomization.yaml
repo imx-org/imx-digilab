@@ -7,7 +7,7 @@ resources:
 images:
   - name: imx-orchestrate-imxgeo
     newName: ghcr.io/imx-org/orchestrate-imxgeo
-    newTag: b6d1d63020142236bbe8e11fdf13479644dffc64
+    newTag: e9d27282094093eac4c137835336a52141299bbe
 
 patches:
   - target:
