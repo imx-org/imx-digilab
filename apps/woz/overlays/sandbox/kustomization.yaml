@@ -1,0 +1,22 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: tn-imx-fieldlab-woz
+resources:
+  - ../../base
+
+images:
+  - name: imx-fieldlab-woz
+    newName: ghcr.io/imx-org/imx-fieldlab-woz
+    newTag: 78ba8d0ae84015e741c02315a2d8612fa5b23b7d
+
+patches:
+  - target:
+      kind: Ingress
+      name: imx-fieldlab-woz-ing
+    patch: |
+      - op: replace
+        path: /spec/rules/0/host
+        value: imx.apps.digilab.network
+      - op: replace
+        path: /spec/tls/0/hosts/0
+        value: imx.apps.digilab.network
