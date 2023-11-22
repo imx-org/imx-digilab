@@ -7,7 +7,7 @@ resources:
 images:
   - name: imx-fieldlab-woz
     newName: ghcr.io/imx-org/imx-fieldlab-woz
-    newTag: e1c251596cae4b3c3b8484ff5b7fe8a0336d9b1f
+    newTag: ed115dd6ea40892129e2ab2619317da50aa46021
 
 patches:
   - target:
