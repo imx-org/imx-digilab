@@ -13,4 +13,4 @@ spec:
               name: http
           env:
             - name: OUTWAY_URL
-              value: https://outway-fsc-nlx-outway.tn-digilab-core-fds-fieldlab
+              value: http://outway-fsc-nlx-outway.tn-digilab-core-fds-fieldlab
