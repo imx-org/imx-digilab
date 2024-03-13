@@ -15,8 +15,6 @@ spec:
               value: http://+:5000
             - name: Routes__0__DownstreamHostAndPorts__0__Host
               value: imx-brp-bevragen-mock-svc
-            - name: Routes__0__DownstreamHostAndPorts__0__Port
-              value: 443
           ports:
             - name: http-brpproxy
               containerPort: 5000
