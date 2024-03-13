@@ -1,0 +1,25 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: tn-imx-brp-bevragen
+resources:
+  - ../../base
+
+images:
+  - name: imx-brp-bevragen-proxy
+    newName: ghcr.io/brp-api/haal-centraal-brp-bevragen-proxy
+    newTag: 2.1.2
+  - name: imx-brp-bevragen-mock
+    newName: ghcr.io/brp-api/haal-centraal-brp-bevragen-gba-mock
+    newTag: 2.0.8
+
+patches:
+  - target:
+      kind: Ingress
+      name: imx-brp-bevragen-proxy-ing
+    patch: |
+      - op: replace
+        path: /spec/rules/0/host
+        value: imx.apps.digilab.network
+      - op: replace
+        path: /spec/tls/0/hosts/0
+        value: imx.apps.digilab.network

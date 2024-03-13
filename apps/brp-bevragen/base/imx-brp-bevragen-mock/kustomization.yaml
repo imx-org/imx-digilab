@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namePrefix: imx-brp-bevragen-mock-
+
+commonLabels:
+  app: imx-brp-bevragen-mock
+
+resources:
+  - deployment.yaml
+  - service.yaml

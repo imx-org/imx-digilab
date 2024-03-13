@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dpl
+spec:
+  template:
+    spec:
+      containers:
+        - name: imx-brp-bevragen-proxy
+          image: imx-brp-bevragen-proxy
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Release
+            - name: ASPNETCORE_URLS
+              value: http://+:5000
+            - name: Routes__0__DownstreamHostAndPorts__0__Host
+              value: imx-brp-bevragen-mock-svc
+            - name: Routes__0__DownstreamHostAndPorts__0__Port
+              value: 443
+          ports:
+            - name: http-brpproxy
+              containerPort: 5000
