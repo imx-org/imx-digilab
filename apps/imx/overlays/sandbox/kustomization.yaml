@@ -13,7 +13,7 @@ images:
     newTag: 2.1.2
   - name: imx-fieldlab
     newName: ghcr.io/imx-org/imx-fieldlab
-    newTag: af30056b4d7ed58714478debaf06af2728a11aa1
+    newTag: f8f3efb9a378fe921b1dba365364d7d7f38af556
   - name: imx-orchestrate-imxgeo
     newName: ghcr.io/imx-org/orchestrate-imxgeo
     newTag: 50feecbddb675e34249af296ee0e9d8cc6f5c488
@@ -21,7 +21,7 @@ images:
 patches:
   - target:
       kind: Ingress
-      name: imx-opkoopbescherming-ing
+      name: imx-brp-bevragen-proxy-ing
     patch: |
       - op: replace
         path: /spec/rules/0/host
@@ -31,7 +31,7 @@ patches:
         value: imx.apps.digilab.network
   - target:
       kind: Ingress
-      name: imx-brp-bevragen-proxy-ing
+      name: imx-fieldlab-ing
     patch: |
       - op: replace
         path: /spec/rules/0/host

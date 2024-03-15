@@ -9,7 +9,7 @@ spec:
     - host: set-in-overlay
       http:
         paths:
-          - path: /opkoopbescherming
+          - path: /fieldlab
             pathType: ImplementationSpecific
             backend:
               service:

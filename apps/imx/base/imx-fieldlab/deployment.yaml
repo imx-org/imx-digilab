@@ -8,9 +8,6 @@ spec:
       containers:
         - name: imx-fieldlab
           image: imx-fieldlab
-          env:
-            - name: SPRING_PROFILES_ACTIVE
-              value: opkoopbescherming
           ports:
             - name: http
               containerPort: 8080
