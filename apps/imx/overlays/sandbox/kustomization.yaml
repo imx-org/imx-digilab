@@ -13,7 +13,7 @@ images:
     newTag: 2.1.2
   - name: imx-fieldlab
     newName: ghcr.io/imx-org/imx-fieldlab
-    newTag: fa8094ba0bf15eacd0f0154e1709e6456839a57b
+    newTag: e7717d2ce15701254273fd627dab496a514a8a7f
   - name: imx-orchestrate-imxgeo
     newName: ghcr.io/imx-org/orchestrate-imxgeo
     newTag: 50feecbddb675e34249af296ee0e9d8cc6f5c488
