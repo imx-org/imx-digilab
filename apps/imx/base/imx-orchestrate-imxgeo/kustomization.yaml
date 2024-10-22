@@ -8,9 +8,5 @@ commonLabels:
 
 resources:
   - deployment.yaml
-  - http-scaled-object.yaml
   - ingress.yaml
   - service.yaml
-
-configurations:
-  - kustomize-config.yaml
