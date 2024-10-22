@@ -1,9 +1,0 @@
-nameReference:
-  - kind: Deployment
-    fieldSpecs:
-      - kind: HTTPScaledObject
-        path: spec/scaleTargetRef/name
-  - kind: Service
-    fieldSpecs:
-      - kind: HTTPScaledObject
-        path: spec/scaleTargetRef/service

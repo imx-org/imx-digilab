@@ -49,24 +49,3 @@ patches:
       - op: replace
         path: /spec/tls/0/hosts/0
         value: imx.apps.digilab.network
-  - target:
-      kind: HTTPScaledObject
-      name: imx-brp-bevragen-proxy-so
-    patch: |
-      - op: replace
-        path: /spec/hosts/0
-        value: imx.apps.digilab.network
-  - target:
-      kind: HTTPScaledObject
-      name: imx-fieldlab-so
-    patch: |
-      - op: replace
-        path: /spec/hosts/0
-        value: imx.apps.digilab.network
-  - target:
-      kind: HTTPScaledObject
-      name: imx-orchestrate-imxgeo-so
-    patch: |
-      - op: replace
-        path: /spec/hosts/0
-        value: imx.apps.digilab.network

@@ -14,9 +14,9 @@ spec:
             pathType: ImplementationSpecific
             backend:
               service:
-                name: keda-interceptor-alias
+                name: svc
                 port:
-                  number: 8080
+                  number: 80
   tls:
     - hosts:
         - set-in-overlay
