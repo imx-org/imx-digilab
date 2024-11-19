@@ -4,4 +4,5 @@ resources:
   - imx-brp-bevragen-mock
   - imx-brp-bevragen-proxy
   - imx-fieldlab
+  - imx-fieldlab-pdv
   - imx-orchestrate-imxgeo

@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namePrefix: imx-fieldlab-pdv-
+
+commonLabels:
+  app: imx-fieldlab-pdv
+
+resources:
+  - deployment.yaml
+  - ingress.yaml
+  - service.yaml
