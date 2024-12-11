@@ -16,7 +16,7 @@ images:
     newTag: e8848bf213167e1ead212fc70c57cb7e44478dc8
   - name: imx-fieldlab-pdv
     newName: ghcr.io/imx-org/imx-fieldlab-pdv
-    newTag: 69e1376c48f62fcb7436a981170527c3a0b17196
+    newTag: a37461143840c56e80dd30a217fc1ba7316ba2ec
   - name: imx-orchestrate-imxgeo
     newName: ghcr.io/imx-org/orchestrate-imxgeo
     newTag: ab2db1a36974b85e837a4214b0a89b82d7406b53
